@@ -48,7 +48,7 @@ const userController = {
       .catch(err => res.status(400).json(err));
   },
 
-  // delete a specific user
+  // remove a user by id
   deleteUser({ params }, res) {
     User.findOneAndDelete({ _id: params.id })
       .then(dbUserData => {

@@ -11,11 +11,9 @@ const {
 
 router.route('/:userId').post(addThought);
 
-router.route('/:userId/:thoughtId').delete(removeThought);
-
 router.route('/').get(getAllThoughts).post(addThought);
 
-router.route('/:thoughtId').get(getThoughtById).put(updateThought);
+router.route('/:thoughtId').get(getThoughtById).put(updateThought).delete(removeThought);
 
 router.route('/:thoughtId/reactions').post(addReaction);
 
